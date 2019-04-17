@@ -12,7 +12,7 @@
   <body>
     <%= render 'shared/flashes' %>
     <%= yield %>
-    <script src="https://unpkg.com/konva@3.2.4/konva.min.js"></script>
+    <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/fabric.js/2.4.6/fabric.min.js" %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
