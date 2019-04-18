@@ -1,5 +1,7 @@
 $( document ).ready(function() {
   window.canvas = new fabric.Canvas('canvas');
+  canvas.setWidth($('.canvas-container').width());
+  canvas.setHeight($('.canvas-container').height());
   canvas.on("object:selected", function(options) {
     options.target.bringToFront();
   });
