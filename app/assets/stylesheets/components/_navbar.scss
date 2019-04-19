@@ -1,12 +1,21 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 1em;
+  align-items: center;
+  text-align: center;
+  background: transparent;
+  height: 40px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.nav-title {
+  grid-column: 1;
+  text-align: left;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.nav-actions {
+  font-size: 25px;
+  grid-column: 3;
+  text-align: right;
 }

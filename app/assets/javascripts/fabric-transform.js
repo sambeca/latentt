@@ -14,7 +14,9 @@ $( document ).ready(function() {
     return (Math.random() * (max - min) + min).toFixed(4);
   }
 
-  let percentage = randomFloatFromInterval(0.2,0.3);
+  let percentage = randomFloatFromInterval(0.25,0.35);
+  let verticalBoundry = canvas.height - canvas.height * 0.6;
+  // console.log(verticalBoundry);
 
   let shadow = {
     color: '#888888',
@@ -27,7 +29,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${randomIntFromInterval(0,999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': randomFloatFromInterval(0,0.05) * canvas.width });
-    img.set({ 'top': randomIntFromInterval(0,100) });
+    img.set({ 'top': randomIntFromInterval(0,verticalBoundry) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
@@ -36,7 +38,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${randomIntFromInterval(0,999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': randomFloatFromInterval(0.2,0.25) * canvas.width });
-    img.set({ 'top': randomIntFromInterval(0,100) });
+    img.set({ 'top': randomIntFromInterval(0,verticalBoundry) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
@@ -45,7 +47,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${randomIntFromInterval(0,999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': randomFloatFromInterval(0.4,0.45) * canvas.width });
-    img.set({ 'top': randomIntFromInterval(0,100) });
+    img.set({ 'top': randomIntFromInterval(0,verticalBoundry) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
@@ -54,7 +56,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${randomIntFromInterval(0,999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': randomFloatFromInterval(0.6,0.65) * canvas.width });
-    img.set({ 'top': randomIntFromInterval(0,100) });
+    img.set({ 'top': randomIntFromInterval(0,verticalBoundry) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
@@ -63,7 +65,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${randomIntFromInterval(0,999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': randomFloatFromInterval(0.8,0.85) * canvas.width });
-    img.set({ 'top': randomIntFromInterval(0,100) });
+    img.set({ 'top': randomIntFromInterval(0,verticalBoundry) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
@@ -72,7 +74,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${randomIntFromInterval(0,999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': randomFloatFromInterval(0,0.05) * canvas.width });
-    img.set({ 'top': randomIntFromInterval(0,100) });
+    img.set({ 'top': randomIntFromInterval(0,verticalBoundry) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
@@ -81,7 +83,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${randomIntFromInterval(0,999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': randomFloatFromInterval(0.2,0.25) * canvas.width });
-    img.set({ 'top': randomIntFromInterval(0,100) });
+    img.set({ 'top': randomIntFromInterval(0,verticalBoundry) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
@@ -90,7 +92,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${randomIntFromInterval(0,999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': randomFloatFromInterval(0.4,0.45) * canvas.width });
-    img.set({ 'top': randomIntFromInterval(0,100) });
+    img.set({ 'top': randomIntFromInterval(0,verticalBoundry) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
@@ -99,7 +101,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${randomIntFromInterval(0,999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': randomFloatFromInterval(0.6,0.65) * canvas.width });
-    img.set({ 'top': randomIntFromInterval(0,100) });
+    img.set({ 'top': randomIntFromInterval(0,verticalBoundry) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
@@ -108,7 +110,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${randomIntFromInterval(0,999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': randomFloatFromInterval(0.8,0.85) * canvas.width });
-    img.set({ 'top': randomIntFromInterval(0,100) });
+    img.set({ 'top': randomIntFromInterval(0,verticalBoundry) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
