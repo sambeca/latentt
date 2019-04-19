@@ -46,9 +46,6 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-  # Compress JavaScripts and CSS.
-  config.assets.js_compressor = Uglifier.new(harmony: true)
-
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
