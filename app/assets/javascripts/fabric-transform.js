@@ -6,7 +6,7 @@ $( document ).ready(function() {
     options.target.bringToFront();
   });
 
-  let percentage = 0.2;
+  let percentage = 0.25;
   let shadow = {
     color: '#888888',
     blur: 49,
@@ -22,7 +22,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${Math.floor(Math.random() * 999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': 0 });
-    img.set({ 'top': 100 });
+    img.set({ 'top': randomIntFromInterval(0,100) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
@@ -31,7 +31,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${Math.floor(Math.random() * 999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': 0.2 * canvas.width });
-    img.set({ 'top': 100 });
+    img.set({ 'top': randomIntFromInterval(0,100) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
@@ -40,7 +40,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${Math.floor(Math.random() * 999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': 0.4 * canvas.width });
-    img.set({ 'top': 100 });
+    img.set({ 'top': randomIntFromInterval(0,100) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
@@ -49,7 +49,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${Math.floor(Math.random() * 999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': 0.6 * canvas.width });
-    img.set({ 'top': 100 });
+    img.set({ 'top': randomIntFromInterval(0,100) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
@@ -58,7 +58,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${Math.floor(Math.random() * 999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': 0.8 * canvas.width });
-    img.set({ 'top': 100 });
+    img.set({ 'top': randomIntFromInterval(0,100) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
@@ -67,7 +67,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${Math.floor(Math.random() * 999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': 0 });
-    img.set({ 'top': 100 });
+    img.set({ 'top': randomIntFromInterval(100,200) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
@@ -76,7 +76,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${Math.floor(Math.random() * 999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': 0.2 * canvas.width });
-    img.set({ 'top': 100 });
+    img.set({ 'top': randomIntFromInterval(100,200) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
@@ -85,7 +85,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${Math.floor(Math.random() * 999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': 0.4 * canvas.width });
-    img.set({ 'top': 100 });
+    img.set({ 'top': randomIntFromInterval(100,200) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
@@ -94,7 +94,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${Math.floor(Math.random() * 999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': 0.6 * canvas.width });
-    img.set({ 'top': 100 });
+    img.set({ 'top': randomIntFromInterval(100,200) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
@@ -103,7 +103,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${Math.floor(Math.random() * 999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': 0.8 * canvas.width });
-    img.set({ 'top': 100 });
+    img.set({ 'top': randomIntFromInterval(100,200) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
@@ -112,7 +112,7 @@ $( document ).ready(function() {
   fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${Math.floor(Math.random() * 999)}-0.png`, function(img) {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': 0 });
-    img.set({ 'top': 100 });
+    img.set({ 'top': randomIntFromInterval(200,300) });
     img.rotate(randomIntFromInterval(-30,30));
     img.setShadow(shadow);
     canvas.add(img);
@@ -122,7 +122,7 @@ $( document ).ready(function() {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': 0.2 * canvas.width });
     img.set({ 'top': 100 });
-    img.rotate(randomIntFromInterval(-30,30));
+    img.rotate(randomIntFromInterval(200,300));
     img.setShadow(shadow);
     canvas.add(img);
   });
@@ -131,7 +131,7 @@ $( document ).ready(function() {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': 0.4 * canvas.width });
     img.set({ 'top': 100 });
-    img.rotate(randomIntFromInterval(-30,30));
+    img.rotate(randomIntFromInterval(200,300));
     img.setShadow(shadow);
     canvas.add(img);
   });
@@ -140,7 +140,7 @@ $( document ).ready(function() {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': 0.6 * canvas.width });
     img.set({ 'top': 100 });
-    img.rotate(randomIntFromInterval(-30,30));
+    img.rotate(randomIntFromInterval(200,300));
     img.setShadow(shadow);
     canvas.add(img);
   });
@@ -149,7 +149,7 @@ $( document ).ready(function() {
     img.scaleToWidth(canvas.width*percentage);
     img.set({ 'left': 0.8 * canvas.width });
     img.set({ 'top': 100 });
-    img.rotate(randomIntFromInterval(-30,30));
+    img.rotate(randomIntFromInterval(200,300));
     img.setShadow(shadow);
     canvas.add(img);
   });
