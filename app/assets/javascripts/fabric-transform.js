@@ -1,16 +1,18 @@
-$( document ).ready(function() {
+$(document).ready(function() {
   window.canvas = new fabric.Canvas('canvas');
 
   canvas.setWidth($('.canvas-container').width());
 
   canvas.setHeight($('.canvas-container').height());
 
-  canvas.on("selection:updated", function(options) {
+  canvas.on("object:selected", function(options) {
     selectedImgUrl = options.target.getSrc();
     options.target.bringToFront();
   });
 
-  $("#openURL").click(function() {
+  const openCanvasImg = document.getElementById('openCanvasImg');
+
+  openCanvasImg.addEventListener('click', () => {
     window.open(selectedImgUrl, '_blank');
   });
 
@@ -115,13 +117,13 @@ $( document ).ready(function() {
     canvas.add(img);
   });
 
-    fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${randomIntFromInterval(0,999)}-0.png`, function(img) {
-      img.scaleToWidth(canvas.width*percentage);
-      img.set({ 'left': randomFloatFromInterval(0.8,0.85) * canvas.width });
-      img.set({ 'top': randomIntFromInterval(0,verticalBoundry) });
-      img.rotate(randomIntFromInterval(-30,30));
-      img.setShadow(shadow);
-      canvas.add(img);
+  fabric.Image.fromURL(`https://patentimages.storage.googleapis.com/pages/US1102${randomIntFromInterval(0,999)}-0.png`, function(img) {
+    img.scaleToWidth(canvas.width*percentage);
+    img.set({ 'left': randomFloatFromInterval(0.8,0.85) * canvas.width });
+    img.set({ 'top': randomIntFromInterval(0,verticalBoundry) });
+    img.rotate(randomIntFromInterval(-30,30));
+    img.setShadow(shadow);
+    canvas.add(img);
   });
 });
 
