@@ -3,11 +3,15 @@
   <div class="nav-title">
   </div>
   <div class="nav-actions">
-    <%= link_to ('<i class="fas fa-sync nav-button"></i>').html_safe, "" %>
-    <button id="openCanvasImg"><i class="fas fa-link nav-button"></i></button>
-  </div>
-</nav>
+    <button aria-label="new batch" data-microtip-position="bottom-left" role="tooltip">
+      <%= link_to ('<i class="fas fa-sync nav-button"></i>').html_safe, "" %>
+    </button>
+    <button id="openCanvasImg" aria-label="open selection" data-microtip-position="bottom-left" role="tooltip">
+      <i class="fas fa-link nav-button"></i>
+    </button>
 <div class="canvas-container" id="field">
   <canvas id="canvas" width="600" height="600"/>
 </div>
+
+
 
