@@ -6,12 +6,12 @@ $( document ).ready(function() {
   canvas.setHeight($('.canvas-container').height());
 
   canvas.on("selection:updated", function(options) {
+    selectedImgUrl = options.target.getSrc();
     options.target.bringToFront();
-    let selectedImgUrl = options.target.getSrc();
-    console.log(selectedImgUrl);
-    $("#openURL").on('click', function(){
+  });
+
+  $("#openURL").click(function() {
     window.open(selectedImgUrl, '_blank');
-    });
   });
 
   const randomIntFromInterval = (min,max) => {
