@@ -5,7 +5,12 @@ $(document).ready(function() {
 
   canvas.setHeight($('.canvas-container').height());
 
-  canvas.on("object:selected", function(options) {
+  canvas.on("selection:created", function(options) {
+    selectedImgUrl = options.target.getSrc();
+    options.target.bringToFront();
+  });
+
+  canvas.on("selection:updated", function(options) {
     selectedImgUrl = options.target.getSrc();
     options.target.bringToFront();
   });
