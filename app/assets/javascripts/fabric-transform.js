@@ -32,10 +32,21 @@ $(document).ready(function() {
   let percentage = randomFloatFromInterval(0.25, 0.35);
   let verticalBoundry = canvas.height - canvas.height * 0.6;
 
-  let patentMinNum = 0;
-  let patentMaxNum = 9999999;
+  patentMinSlider.oninput = function() {
+    localStorage.setItem("patentUserInputMin", this.value);
+  };
+
+  patentMaxSlider.oninput = function() {
+    localStorage.setItem("patentUserInputMax", this.value);
+  };
+
+  let patentMinNum = JSON.parse(localStorage.getItem("patentUserInputMin"));
+  let patentMaxNum = JSON.parse(localStorage.getItem("patentUserInputMax"));
+
+  document.getElementById("patentMinSlider").value = patentMinNum || 0;
+  document.getElementById("patentMaxSlider").value = patentMaxNum || 4999999;
+
   let patentPageNum = 0;
-  // console.log(verticalBoundry);
 
   let shadow = {
     color: "#888888",
