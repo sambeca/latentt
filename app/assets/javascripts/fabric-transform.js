@@ -31,7 +31,10 @@ $(document).ready(function() {
 
   let percentage = randomFloatFromInterval(0.25, 0.35);
   let verticalBoundry = canvas.height - canvas.height * 0.6;
+
+  let patentMinNum = 0;
   let patentMaxNum = 9999999;
+  let patentPageNum = 0;
   // console.log(verticalBoundry);
 
   let shadow = {
@@ -44,9 +47,9 @@ $(document).ready(function() {
 
   fabric.Image.fromURL(
     `https://patentimages.storage.googleapis.com/pages/US${randomIntFromInterval(
-      0,
+      patentMinNum,
       patentMaxNum
-    )}-0.png`,
+    )}-${patentPageNum}.png`,
     function(img) {
       img.scaleToWidth(canvas.width * percentage);
       img.set({ left: randomFloatFromInterval(0, 0.05) * canvas.width });
@@ -59,9 +62,9 @@ $(document).ready(function() {
 
   fabric.Image.fromURL(
     `https://patentimages.storage.googleapis.com/pages/US${randomIntFromInterval(
-      0,
+      patentMinNum,
       patentMaxNum
-    )}-0.png`,
+    )}-${patentPageNum}.png`,
     function(img) {
       img.scaleToWidth(canvas.width * percentage);
       img.set({ left: randomFloatFromInterval(0.2, 0.25) * canvas.width });
@@ -74,9 +77,9 @@ $(document).ready(function() {
 
   fabric.Image.fromURL(
     `https://patentimages.storage.googleapis.com/pages/US${randomIntFromInterval(
-      0,
+      patentMinNum,
       patentMaxNum
-    )}-0.png`,
+    )}-${patentPageNum}.png`,
     function(img) {
       img.scaleToWidth(canvas.width * percentage);
       img.set({ left: randomFloatFromInterval(0.4, 0.45) * canvas.width });
@@ -89,9 +92,9 @@ $(document).ready(function() {
 
   fabric.Image.fromURL(
     `https://patentimages.storage.googleapis.com/pages/US${randomIntFromInterval(
-      0,
+      patentMinNum,
       patentMaxNum
-    )}-0.png`,
+    )}-${patentPageNum}.png`,
     function(img) {
       img.scaleToWidth(canvas.width * percentage);
       img.set({ left: randomFloatFromInterval(0.6, 0.65) * canvas.width });
@@ -104,9 +107,9 @@ $(document).ready(function() {
 
   fabric.Image.fromURL(
     `https://patentimages.storage.googleapis.com/pages/US${randomIntFromInterval(
-      0,
+      patentMinNum,
       patentMaxNum
-    )}-0.png`,
+    )}-${patentPageNum}.png`,
     function(img) {
       img.scaleToWidth(canvas.width * percentage);
       img.set({ left: randomFloatFromInterval(0.8, 0.85) * canvas.width });
@@ -119,9 +122,9 @@ $(document).ready(function() {
 
   fabric.Image.fromURL(
     `https://patentimages.storage.googleapis.com/pages/US${randomIntFromInterval(
-      0,
+      patentMinNum,
       patentMaxNum
-    )}-0.png`,
+    )}-${patentPageNum}.png`,
     function(img) {
       img.scaleToWidth(canvas.width * percentage);
       img.set({ left: randomFloatFromInterval(0, 0.05) * canvas.width });
@@ -134,9 +137,9 @@ $(document).ready(function() {
 
   fabric.Image.fromURL(
     `https://patentimages.storage.googleapis.com/pages/US${randomIntFromInterval(
-      0,
+      patentMinNum,
       patentMaxNum
-    )}-0.png`,
+    )}-${patentPageNum}.png`,
     function(img) {
       img.scaleToWidth(canvas.width * percentage);
       img.set({ left: randomFloatFromInterval(0.2, 0.25) * canvas.width });
@@ -149,9 +152,9 @@ $(document).ready(function() {
 
   fabric.Image.fromURL(
     `https://patentimages.storage.googleapis.com/pages/US${randomIntFromInterval(
-      0,
+      patentMinNum,
       patentMaxNum
-    )}-0.png`,
+    )}-${patentPageNum}.png`,
     function(img) {
       img.scaleToWidth(canvas.width * percentage);
       img.set({ left: randomFloatFromInterval(0.4, 0.45) * canvas.width });
@@ -164,9 +167,9 @@ $(document).ready(function() {
 
   fabric.Image.fromURL(
     `https://patentimages.storage.googleapis.com/pages/US${randomIntFromInterval(
-      0,
+      patentMinNum,
       patentMaxNum
-    )}-0.png`,
+    )}-${patentPageNum}.png`,
     function(img) {
       img.scaleToWidth(canvas.width * percentage);
       img.set({ left: randomFloatFromInterval(0.6, 0.65) * canvas.width });
@@ -179,9 +182,9 @@ $(document).ready(function() {
 
   fabric.Image.fromURL(
     `https://patentimages.storage.googleapis.com/pages/US${randomIntFromInterval(
-      0,
+      patentMinNum,
       patentMaxNum
-    )}-0.png`,
+    )}-${patentPageNum}.png`,
     function(img) {
       img.scaleToWidth(canvas.width * percentage);
       img.set({ left: randomFloatFromInterval(0.8, 0.85) * canvas.width });
