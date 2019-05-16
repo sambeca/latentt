@@ -31,6 +31,14 @@ nav {
   }
 }
 
-.nav-sliders {
+.slider-container {
   height: 50px;
+}
+
+.nav-sliders {
+  margin-left: 10px;
+ vertical-align: baseline;
+ display: flex;
+ justify-content: flex-start;
+ height: auto;
 }

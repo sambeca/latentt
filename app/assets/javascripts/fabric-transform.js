@@ -34,6 +34,7 @@ $(document).ready(function() {
 
   patentMinSlider.oninput = function() {
     localStorage.setItem("patentUserInputMin", this.value);
+    console.log(JSON.parse(localStorage.getItem("patentUserInputMin")));
   };
 
   patentMaxSlider.oninput = function() {
@@ -44,7 +45,7 @@ $(document).ready(function() {
   let patentMaxNum = JSON.parse(localStorage.getItem("patentUserInputMax"));
 
   document.getElementById("patentMinSlider").value = patentMinNum || 0;
-  document.getElementById("patentMaxSlider").value = patentMaxNum || 4999999;
+  document.getElementById("patentMaxSlider").value = patentMaxNum || 3333333;
 
   let patentPageNum = 0;
 
