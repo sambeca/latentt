@@ -21,6 +21,56 @@ $(document).ready(function() {
     window.open(selectedImgUrl, "_blank");
   });
 
+  const openPagesFromSelected = document.getElementById("openPagesFromSelected");
+
+openPagesFromSelected.addEventListener("click", () => {
+  page0Url = selectedImgUrl.slice(0, -5) + "0.png";
+  page1Url = selectedImgUrl.slice(0, -5) + "1.png";
+  page2Url = selectedImgUrl.slice(0, -5) + "2.png";
+  page3Url = selectedImgUrl.slice(0, -5) + "3.png";
+  page4Url = selectedImgUrl.slice(0, -5) + "4.png";
+  fabric.Image.fromURL(page0Url, function(img) {
+    img.scaleToWidth(canvas.width * percentage);
+    img.set({ left: randomFloatFromInterval(0, 0.05) * canvas.width });
+    img.set({ top: randomIntFromInterval(0, verticalBoundry) });
+    img.rotate(randomIntFromInterval(-30, 30));
+    img.setShadow(shadow);
+    canvas.add(img);
+  });
+  fabric.Image.fromURL(page1Url, function(img) {
+    img.scaleToWidth(canvas.width * percentage);
+    img.set({ left: randomFloatFromInterval(0.2, 0.25) * canvas.width });
+    img.set({ top: randomIntFromInterval(0, verticalBoundry) });
+    img.rotate(randomIntFromInterval(-30, 30));
+    img.setShadow(shadow);
+    canvas.add(img);
+  });
+  fabric.Image.fromURL(page2Url, function(img) {
+    img.scaleToWidth(canvas.width * percentage);
+    img.set({ left: randomFloatFromInterval(0.4, 0.45) * canvas.width });
+    img.set({ top: randomIntFromInterval(0, verticalBoundry) });
+    img.rotate(randomIntFromInterval(-30, 30));
+    img.setShadow(shadow);
+    canvas.add(img);
+  });
+  fabric.Image.fromURL(page3Url, function(img) {
+    img.scaleToWidth(canvas.width * percentage);
+    img.set({ left: randomFloatFromInterval(0.6, 0.65) * canvas.width });
+    img.set({ top: randomIntFromInterval(0, verticalBoundry) });
+    img.rotate(randomIntFromInterval(-30, 30));
+    img.setShadow(shadow);
+    canvas.add(img);
+  });
+  fabric.Image.fromURL(page4Url, function(img) {
+    img.scaleToWidth(canvas.width * percentage);
+    img.set({ left: randomFloatFromInterval(0.8, 0.85) * canvas.width });
+    img.set({ top: randomIntFromInterval(0, verticalBoundry) });
+    img.rotate(randomIntFromInterval(-30, 30));
+    img.setShadow(shadow);
+    canvas.add(img);
+  });
+});
+
   const randomIntFromInterval = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
