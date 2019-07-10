@@ -82,20 +82,8 @@ openPagesFromSelected.addEventListener("click", () => {
   let percentage = randomFloatFromInterval(0.25, 0.35);
   let verticalBoundry = canvas.height - canvas.height * 0.6;
 
-  patentMinSlider.oninput = function() {
-    localStorage.setItem("patentUserInputMin", this.value);
-    console.log(JSON.parse(localStorage.getItem("patentUserInputMin")));
-  };
-
-  patentMaxSlider.oninput = function() {
-    localStorage.setItem("patentUserInputMax", this.value);
-  };
-
-  let patentMinNum = JSON.parse(localStorage.getItem("patentUserInputMin"));
-  let patentMaxNum = JSON.parse(localStorage.getItem("patentUserInputMax"));
-
-  document.getElementById("patentMinSlider").value = patentMinNum || 0;
-  document.getElementById("patentMaxSlider").value = patentMaxNum || 3333333;
+  let patentMinNum = JSON.parse(document.getElementById("fieldMinInput").value);
+  let patentMaxNum = JSON.parse(document.getElementById("fieldMaxInput").value);
 
   let patentPageNum = 0;
 

@@ -36,3 +36,10 @@ input, button
   border:none;
   background: none;
 }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}

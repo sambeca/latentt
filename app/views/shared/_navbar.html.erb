@@ -1,13 +1,15 @@
 <nav>
     <div class="nav__inner">
-        <div class="nav-sliders__container">
+        <div class="nav-input__container">
+            <%= simple_form_for(@field) do |f| %>
             <div aria-label="min" data-microtip-position="bottom" role="tooltip">
-                <input class="nav-sliders__input" type="range" min="0" max="8888888" class="nav-sliders__input" id="patentMinSlider">
+                <%= f.text_field :range_min, id: "fieldMinInput", class: "nav-input__form" %>
             </div>
             <div aria-label="max" data-microtip-position="bottom" role="tooltip">
-                <input class="nav-sliders__input" type="range" min="0" max="8888888" class="nav-sliders__input" id="patentMaxSlider">
-                </div>
+                <%= f.text_field :range_max, id: "fieldMaxInput", class: "nav-input__form" %>
             </div>
+            <% end %>
+        </div>
         <div class="nav-buttons">
             <button aria-label="new batch" data-microtip-position="bottom-left" role="tooltip">
                 <%= link_to ('<i class="fas fa-sync nav-button"></i>').html_safe, "" %>
@@ -19,7 +21,7 @@
                 <i class="far fa-file-alt"></i>
             </button>
             <button aria-label="save to collection" data-microtip-position="bottom-left" role="tooltip" id="saveToCollection">
-              <i class="far fa-save"></i>
+                <i class="far fa-save"></i>
             </button>
         </div>
     </div>
