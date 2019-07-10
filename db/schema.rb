@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 2019_07_10_123147) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
-    t.string "rangemin", null: false
-    t.string "rangemax", null: false
+    t.string "range_min"
+    t.string "range_max"
     t.index ["user_id"], name: "index_fields_on_user_id"
   end
 
