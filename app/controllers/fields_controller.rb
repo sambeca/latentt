@@ -24,4 +24,14 @@ class FieldsController < ApplicationController
 
   def edit
   end
+
+  private
+
+  def field_params
+    field.require(:field).permit(:range_min, :range_max, :user_id, :name)
+  end
+
+  def set_field
+    @field = Field.find(params[:id])
+  end
 end
