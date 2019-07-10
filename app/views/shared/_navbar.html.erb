@@ -1,14 +1,25 @@
 <nav>
     <div class="nav__inner">
         <div class="nav-input__container">
-            <%= simple_form_for(@field) do |f| %>
-            <div aria-label="min" data-microtip-position="bottom" role="tooltip">
-                <%= f.text_field :range_min, id: "fieldMinInput", class: "nav-input__form" %>
-            </div>
-            <div aria-label="max" data-microtip-position="bottom" role="tooltip">
-                <%= f.text_field :range_max, id: "fieldMaxInput", class: "nav-input__form" %>
-            </div>
+            <% if user_signed_in? %>
+                <%= simple_form_for(@field) do |f| %>
+                    <div aria-label="min" data-microtip-position="bottom" role="tooltip">
+                        <%= f.text_field :range_min, id: "fieldMinInput", class: "nav-input__form" %>
+                    </div>
+                    <div aria-label="max" data-microtip-position="bottom" role="tooltip">
+                        <%= f.text_field :range_max, id: "fieldMaxInput", class: "nav-input__form" %>
+                    </div>
+                <% end %>
+                <% else %>
+                    <div>
+                        <input type="text" id="fieldMinInput" class="nav-input__form">
+                        <input type="text" id="fieldMaxInput" class="nav-input__form">
+                    </div>
             <% end %>
+            <div class="nav-input__slider">
+                <input type="range" min="0" max="9999999" value="807292" id="fieldMinSlider">
+                <input type="range" min="0" max="9999999" value="2731633" id="fieldMaxSlider">
+            </div>
         </div>
         <div class="nav-buttons">
             <button aria-label="new batch" data-microtip-position="bottom-left" role="tooltip">
