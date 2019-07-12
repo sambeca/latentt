@@ -9,6 +9,7 @@ gem 'rails', '5.2.3'
 gem 'redis'
 gem 'devise'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'bootstrap-slider-rails'
 
 gem 'autoprefixer-rails'

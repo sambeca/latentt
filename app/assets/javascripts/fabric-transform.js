@@ -77,25 +77,29 @@ $(document).ready(function() {
     });
   });
 
-  // sliders
+  // slider
 
-  fieldMinSlider.oninput = function() {
-    localStorage.setItem("fieldMinInputLocal", this.value);
-    document.getElementById("fieldMinInput").value = this.value;
-  };
+  $("#fieldSlider").slider({
+    range: true,
+    min: 0,
+    max: 9999999,
+    values: [
+      localStorage.getItem("fieldMinInputLocal") || 807292,
+      localStorage.getItem("fieldMaxInputLocal") || 2731633
+    ],
+    slide: function(event, ui) {
+      localStorage.setItem("fieldMinIsnputLocal", $(this).slider("values", 0));
+      localStorage.setItem("fieldMaxInputLocal", $(this).slider("values", 1));
+    }
+  });
 
-  fieldMaxSlider.oninput = function() {
-    localStorage.setItem("fieldMaxInputLocal", this.value);
-    document.getElementById("fieldMaxInput").value = this.value;
-  };
+  let fieldSlider = $("#fieldSlider");
 
-  let patentMinNum = JSON.parse(localStorage.getItem("fieldMinInputLocal"));
-  let patentMaxNum = JSON.parse(localStorage.getItem("fieldMaxInputLocal"));
+  let sliderMin = fieldSlider.slider("values")[0];
+  let sliderMax = fieldSlider.slider("values")[1];
 
-  document.getElementById("fieldMinSlider").value = patentMinNum;
-  document.getElementById("fieldMaxSlider").value = patentMaxNum;
-  document.getElementById("fieldMinInput").value = patentMinNum;
-  document.getElementById("fieldMaxInput").value = patentMaxNum;
+  let patentMinNum = sliderMin;
+  let patentMaxNum = sliderMax;
 
   // load images onto canvas
 
