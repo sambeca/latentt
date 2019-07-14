@@ -1,6 +1,11 @@
 .ui-slider .ui-slider-handle {
   border: $solid-line;
+  background: white;
   &:focus {
     outline: none;
   }
+}
+
+.ui-slider-range {
+  background: white;
 }

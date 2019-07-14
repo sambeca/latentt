@@ -25,11 +25,12 @@ nav {
 
 .nav-slider__container {
   margin-left: $container-margin;
+  margin-right: $container-margin;
   align-items: center;
   display: flex;
   justify-content: center;
   height: 100%;
-  width: 400px;
+  width: 100%;
 }
 
 .nav-buttons__container {
@@ -38,11 +39,11 @@ nav {
   display: flex;
   justify-content: flex-end;
   height: 100%;
-  width: 400px;
+  width: 200px;
 }
 
 .nav-slider__input {
-  width: 400px;
+  width: 100%;
   margin-left: 8px;
   border: $solid-line;
 }
