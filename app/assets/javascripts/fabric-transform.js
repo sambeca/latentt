@@ -88,7 +88,7 @@ $(document).ready(function() {
       localStorage.getItem("fieldMaxInputLocal") || 2731633
     ],
     slide: function(event, ui) {
-      localStorage.setItem("fieldMinIsnputLocal", $(this).slider("values", 0));
+      localStorage.setItem("fieldMinInputLocal", $(this).slider("values", 0))
       localStorage.setItem("fieldMaxInputLocal", $(this).slider("values", 1));
     }
   });

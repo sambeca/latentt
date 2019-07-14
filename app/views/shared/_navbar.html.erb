@@ -1,24 +1,21 @@
 <nav>
     <div class="nav__inner">
-        <div class="nav-input__container">
-
-                <div id="fieldSlider" style="width: 400px"></div>
-
+        <div class="nav-slider__container">
+            <div id="fieldSlider" class="nav-slider__input"></div>
         </div>
-    </div>
-    <div class="nav-buttons">
-        <button aria-label="new batch" data-microtip-position="bottom-left" role="tooltip">
-            <%= link_to ('<i class="fas fa-sync nav-button"></i>').html_safe, "" %>
-        </button>
-        <button id="openCanvasImg" aria-label="open selection" data-microtip-position="bottom-left" role="tooltip">
-            <i class="fas fa-link nav-button"></i>
-        </button>
-        <button id="openPagesFromSelected" aria-label="open pages from selected" data-microtip-position="bottom-left" role="tooltip">
-            <i class="far fa-file-alt"></i>
-        </button>
-        <button aria-label="save to collection" data-microtip-position="bottom-left" role="tooltip" id="saveToCollection">
-            <i class="far fa-save"></i>
-        </button>
-    </div>
+        <div class="nav-buttons__container">
+            <button aria-label="new batch" data-microtip-position="bottom-left" role="tooltip">
+                <%= link_to ('<i class="fas fa-sync nav-button"></i>').html_safe, "" %>
+            </button>
+            <button id="openCanvasImg" aria-label="open selection" data-microtip-position="bottom-left" role="tooltip">
+                <i class="fas fa-link nav-button"></i>
+            </button>
+            <button id="openPagesFromSelected" aria-label="open pages from selected" data-microtip-position="bottom-left" role="tooltip">
+                <i class="far fa-file-alt"></i>
+            </button>
+            <button aria-label="save to collection" data-microtip-position="bottom-left" role="tooltip" id="saveToCollection">
+                <i class="far fa-save"></i>
+            </button>
+        </div>
     </div>
 </nav>
