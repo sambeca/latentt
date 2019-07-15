@@ -82,7 +82,7 @@ $(document).ready(function() {
   $("#fieldSlider").slider({
     range: true,
     min: 0,
-    max: 9999999,
+    max: 8925111,
     values: [
       localStorage.getItem("fieldMinInputLocal") || 807292,
       localStorage.getItem("fieldMaxInputLocal") || 2731633
