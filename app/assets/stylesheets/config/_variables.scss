@@ -32,8 +32,12 @@ a:link, a:hover, a:visited, a:link, a:active
 
 input, button
 {
-  border:none;
+  border: none;
   background: none;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 input:focus,
