@@ -1,18 +1,21 @@
 <div class="footer">
     <div class="footer__inner">
         <div class="footer-buttons__container">
-            <button aria-label="new batch" data-microtip-position="top-left" role="tooltip">
+            <button aria-label="new batch (n)" data-microtip-position="top-left" role="tooltip">
                 <%= link_to ('<i class="icon-refresh"></i>').html_safe, "" %>
             </button>
-            <button id="openCanvasImg" aria-label="open selection" data-microtip-position="top-left" role="tooltip">
-                <i class="icon-link"></i>
-            </button>
-            <button id="openPagesFromSelected" aria-label="open pages from selected" data-microtip-position="top-left" role="tooltip">
+            <button id="openPagesFromSelected" aria-label="add pages from selected" data-microtip-position="top-left" role="tooltip">
                 <i class="icon-layers"></i>
             </button>
-            <button aria-label="save to collection" data-microtip-position="top-left" role="tooltip" id="saveToCollection">
-                <i class="icon-plus"></i>
+            <button id="openCanvasImg" aria-label="open selection" data-microtip-position="top-left" role="tooltip">
+                <i class="icon-cloud-download"></i>
             </button>
+            <button>
+              <i class="icon-info"></i>
+            </button>
+        <!--     <button aria-label="save to collection" data-microtip-position="top-left" role="tooltip" id="saveToCollection">
+                <i class="icon-plus"></i>
+            </button> -->
         </div>
     </div>
 </div>

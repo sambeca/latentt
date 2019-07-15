@@ -38,6 +38,9 @@ input, button
   &:focus {
     outline: none;
   }
+  &:after {
+    outline: none;
+  }
 }
 
 input:focus,
