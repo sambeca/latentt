@@ -1,16 +1,16 @@
 <div class="footer">
     <div class="footer__inner">
         <div class="footer-buttons__container">
-            <button aria-label="new batch (n)" data-microtip-position="top-left" role="tooltip">
+            <button data-toggle="tooltip" data-placement="top" title="new batch">
                 <%= link_to ('<i class="icon-refresh"></i>').html_safe, "" %>
             </button>
-            <button id="openPagesFromSelected" aria-label="add pages from selected" data-microtip-position="top-left" role="tooltip">
+            <button id="openPagesFromSelected" data-toggle="tooltip" data-placement="top" title="more pages from selection">
                 <i class="icon-layers"></i>
             </button>
-            <button id="openCanvasImg" aria-label="open selection" data-microtip-position="top-left" role="tooltip">
-                <i class="icon-cloud-download"></i>
+            <button id="openCanvasImg" data-toggle="tooltip" data-placement="top" title="open selection">
+                <i class="icon-link"></i>
             </button>
-            <button>
+            <button id="showInfo" data-toggle="tooltip" data-placement="top" title="about">
               <i class="icon-info"></i>
             </button>
         <!--     <button aria-label="save to collection" data-microtip-position="top-left" role="tooltip" id="saveToCollection">

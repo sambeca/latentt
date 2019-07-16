@@ -1,0 +1,16 @@
+.tooltip {
+  padding-left: 8px;
+  padding-right: 8px;
+
+}
+.tooltip > .arrow::before {
+  display: none;
+}
+
+.tooltip-inner {
+  background: #FFF;
+  border: $solid-line;
+  color: black;
+  white-space:nowrap;
+  max-width:none;
+}
