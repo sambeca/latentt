@@ -38,10 +38,6 @@
 
 .footer-button {
   color: black;
+  align-items: center;
   text-decoration: none;
-  padding: 8px;
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.1);
-  }
 }

@@ -1,21 +1,18 @@
 <div class="footer">
     <div class="footer__inner">
         <div class="footer-buttons__container">
-            <button data-toggle="tooltip" data-placement="top" title="new batch">
+            <button class="footer-button" data-toggle="tooltip" data-placement="top" data-animation="false" title="new set of pages">
                 <%= link_to ('<i class="icon-refresh"></i>').html_safe, "" %>
             </button>
-            <button id="openPagesFromSelected" data-toggle="tooltip" data-placement="top" title="more pages from selection">
+            <button class="footer-button" id="openPagesFromSelected" data-toggle="tooltip" data-placement="top" data-animation="false" title="more pages from selection">
                 <i class="icon-layers"></i>
             </button>
-            <button id="openCanvasImg" data-toggle="tooltip" data-placement="top" title="open selection">
+            <button class="footer-button" id="openCanvasImg" data-toggle="tooltip" data-placement="top" data-animation="false" title="open selection">
                 <i class="icon-link"></i>
             </button>
-            <button id="showInfo" data-toggle="tooltip" data-placement="top" title="about">
-              <i class="icon-info"></i>
+            <button class="footer-button" id="showInfo" data-toggle="tooltip" data-placement="top" data-html="true" data-animation="false" title="<%= render 'shared/info' %>">
+                <i class="icon-info"></i>
             </button>
-        <!--     <button aria-label="save to collection" data-microtip-position="top-left" role="tooltip" id="saveToCollection">
-                <i class="icon-plus"></i>
-            </button> -->
         </div>
     </div>
 </div>

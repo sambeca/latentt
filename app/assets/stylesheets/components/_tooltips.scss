@@ -1,8 +1,9 @@
 .tooltip {
   padding-left: 8px;
   padding-right: 8px;
-
+  opacity: 1 !important;
 }
+
 .tooltip > .arrow::before {
   display: none;
 }
@@ -13,4 +14,5 @@
   color: black;
   white-space:nowrap;
   max-width:none;
+  text-align: left !important;
 }
